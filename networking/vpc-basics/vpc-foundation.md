@@ -18,6 +18,8 @@ Built a custom multi-AZ VPC architecture manually in AWS.
 - DNS Resolution Enabled
 - DNS Hostnames Enabled
 
+![VPC overivew](screenshots/vpc-overview.png)
+
 ## Subnet Architecture
 
 ### Availability Zone A
