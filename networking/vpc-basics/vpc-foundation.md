@@ -68,3 +68,23 @@ Built a custom multi-AZ VPC architecture manually in AWS.
 The manually configured networking components were later removed in preparation for rebuilding the architecture using AWS CloudFormation automation.
 
 ![Availability Zones subnets](screenshots/AZ-subnets.png)
+
+## NAT Gateway Architecture
+
+Implemented regionally resilient outbound internet access for private subnets.
+
+### Configured
+- Created 3 NAT Gateways
+- Deployed 1 NAT Gateway in each Availability Zone
+- Created 3 dedicated private route tables
+- Added default IPv4 route (0.0.0.0/0) pointing to NAT Gateway
+- Associated private subnets with AZ-specific route tables
+- Implemented regionally resilient NAT Gateway architecture
+
+### NAT Gateway Deployment
+
+![AWS Systems Manager(SSH)](screenshots/SSH-SessionManager.png)
+
+### NAT Route Tables
+
+![NAT Route Table](screenshots/nat-route-table.png)
