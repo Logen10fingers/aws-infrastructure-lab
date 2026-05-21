@@ -48,3 +48,21 @@ Built a custom multi-AZ VPC architecture manually in AWS.
 ## Screenshots
 - VPC overview
 - Subnet architecture
+
+## Additional Networking Configuration
+
+### Internet Connectivity
+- Created and attached an Internet Gateway (IGW)
+- Configured a dedicated route table for web subnets
+- Associated web subnets with public route table
+- Added IPv4 default route (0.0.0.0/0) to IGW
+- Added IPv6 default route (::/0) to IGW
+- Enabled automatic public IPv4 assignment for:
+  - sn-web-A
+  - sn-web-B
+  - sn-web-C
+
+## Notes
+The manually configured networking components were later removed in preparation for rebuilding the architecture using AWS CloudFormation automation.
+
+![Availability Zones subnets](screenshots/AZ-subnets.png)
